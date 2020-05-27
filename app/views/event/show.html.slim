@@ -18,5 +18,6 @@ p #{@event.org_email}
     .actions
         = f.submit
 
-
-
+/! yield index of comment here
+.comments
+    = render :partial => "comment/index", locals: { comments: @event.comment }

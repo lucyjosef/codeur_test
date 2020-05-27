@@ -17,7 +17,8 @@ class CommentsController < ApplicationController
   end
 
   def index
-    @comments = @event.comments
+    # idk why but comments is broken, removed s and it worked ... 
+    @comments = @event.comment.order("created_at DESC")
   end
 
   private
