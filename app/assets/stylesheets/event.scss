@@ -31,7 +31,7 @@ p.date {
 span.strong {
     color: red;
 }
-.add_comment {
+.add_comment, .create_event {
     padding: 5% 3%;
     background-color: lightgrey;
 
@@ -44,6 +44,10 @@ span.strong {
         background-color: blue;
         padding: 10px;
         border: none;
+    }
+
+    #create_submit {
+        margin-top: 20px;
     }
 
 }

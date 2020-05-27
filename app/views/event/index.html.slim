@@ -1,11 +1,19 @@
 - if @events.any?
     ul.list_event 
-        - @events.each do |e|  
+        - @events.order("event_date DESC").each do |e|  
             li
                 .row_event
-                    p = link_to "#{e.name}", e
-                    p #{e.description}
-                    p #{e.event_date}
-                    p #{e.org_email}
+                - if e.event_date < 10.days.from_now && e.event_date > 1.day.ago
+                    - color_class = 'red'
+                - elsif e.event_date < Date.today
+                    - color_class = 'grey'
+                - elsif e.event_date < 10.days.ago
+                    - color_class = 'hidden'
+                - else
+                    - color_class = nil
+                p = link_to "#{e.name}", e, class: color_class
+                p #{e.description}
+                p #{e.event_date}
+                p #{e.org_email}
 - else
     p There is no event to display

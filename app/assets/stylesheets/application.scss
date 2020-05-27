@@ -14,28 +14,16 @@
  *= require_self
  */
 
-// modal
-div#modal_out {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.red {
+    color: red;
 }
 
-p#closeMe {
-    float: right;
-    cursor: pointer;
+.grey {
+    color: grey;
 }
 
-div#modal_post {
-    padding: 10%;
-    background-color: white;
-    min-width: 50%
+.hidden {
+    display: none;
 }
 
 body {
