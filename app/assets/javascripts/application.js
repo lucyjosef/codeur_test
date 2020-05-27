@@ -17,20 +17,3 @@
 
 import '../stylesheets/application'
 
-
-let modalHTML = `
-<div id="modal_out">
-<div id="modal_post">
-
-<div id="modal_head">
-<p id="closeMe" onclick="showModal = false; location.reload();">X</p><br>
-<h2>Create an event</h2>
-</div>
-
-<div id="modal_body">
-
-</div>
-
-</div>
-</div>
-`
