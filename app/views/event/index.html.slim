@@ -1,4 +1,3 @@
-h1 Events
 - if @events.any?
     table
     thead
@@ -10,9 +9,9 @@ h1 Events
         - @events.each do |e|
             tr
                 td = link_to "#{e.name}", e
-                td "#{e.description}"
-                td "#{e.event_date}"
-                td "#{e.org_email}"
+                td #{e.description}
+                td #{e.event_date}
+                td #{e.org_email}
             br
 - else
     p There is no event to display
