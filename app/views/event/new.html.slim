@@ -1,0 +1,23 @@
+= form_for(@event) do |f|
+    .field
+        = f.label :name
+        br
+        = f.text_field :name
+
+    .field
+        = f.label :event_date
+        br
+        = f.date_field  :event_date
+    
+    .field
+        = f.label :description
+        br
+        = f.text_field :description
+
+    .field
+        = f.label :org_email
+        br
+        = f.text_field :org_email
+
+    .actions
+        = f.submit
