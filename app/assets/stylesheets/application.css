@@ -13,3 +13,7 @@
  *= require_tree .
  *= require_self
  */
+.logo_menu {
+    width: 10%;
+    min-width: 115px;
+}
