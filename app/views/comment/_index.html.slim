@@ -1,14 +1,9 @@
 - if comments.any?
-    table
-    thead
-        tr
-        th
-    tbody
-        - comments.each do |c|
-            tr.one_comment
-                td #{c.author}
-                br
-                td #{c.message}
-            br
+    ul.list_comment 
+        - comments.order("created_at DESC").each do |c|  
+            li
+                .row_comment
+                    p.author #{c.author} :
+                    p.message "#{c.message}"
 - else
     p No comment ...

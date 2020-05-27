@@ -1,3 +1,52 @@
 // Place all the styles related to the Event controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+ul.list_event {
+    list-style: none;
+
+    li {
+        width: 95%;
+        border-bottom: 1px dashed blue;
+
+        .row_event {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+    }
+}
+a.back_btn {
+    color: blue;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+p.description {
+    border: 1px blue dashed;
+    padding: 5% 3%;
+}
+p.date {
+    color: grey;
+    font-size: 0.8em;
+}
+span.strong {
+    color: red;
+}
+.add_comment {
+    padding: 5% 3%;
+    background-color: lightgrey;
+
+    textarea, input {
+        width: 99%
+    }
+
+    input[type="submit"] {
+        color: white;
+        background-color: blue;
+        padding: 10px;
+        border: none;
+    }
+
+}
+.comments {
+    padding: 5% 0;
+}
