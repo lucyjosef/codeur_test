@@ -14,7 +14,7 @@ ActiveRecord::Schema.define(version: 2020_05_26_163611) do
 
   create_table "comments", force: :cascade do |t|
     t.string "author"
-    t.text "message"
+    t.text "message", limit: 140
     t.integer "event_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

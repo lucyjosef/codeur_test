@@ -1,5 +1,9 @@
 - if @events.any?
+    button.active date
+    button organizer
+
     ul.list_event 
+        / todo: dynamize the filter field
         - @events.order("event_date DESC").each do |e|  
             li
                 .row_event

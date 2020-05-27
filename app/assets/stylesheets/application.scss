@@ -13,7 +13,14 @@
  *= require_tree .
  *= require_self
  */
-
+ button {
+    padding: 10px;
+    border: none;
+ }
+.active {
+    background-color: blue;
+    color: white;
+}
 .red {
     color: red;
 }
