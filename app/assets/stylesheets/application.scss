@@ -13,6 +13,32 @@
  *= require_tree .
  *= require_self
  */
+@import "bootstrap";
+
+// modal
+div#modal_out {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+p#closeMe {
+    float: right;
+    cursor: pointer;
+}
+
+div#modal_post {
+    padding: 10%;
+    background-color: white;
+    min-width: 50%
+}
+
 body {
     margin: -16px 0 0 0;
     font-family: sans-serif;

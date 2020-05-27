@@ -17,6 +17,15 @@ html
           = link_to '/', id: "logo" do
             = image_tag  "logo.png", class: "logo_menu"
         li.nav-item
-          = link_to "Add event", '/events/new', class: 'add_event_btn'
+          / = link_to "Add event", '/events/new', class: 'add_event_btn', id: 'show-modal', :onclick => 'showModal = true'
+          / = link_to "Add event", '#', class: 'add_event_btn', id: 'show-modal', :onclick => 'showModal = true'
+          = link_to "Add event", '#', class: 'add_event_btn', data: {toggle: "modal" target:"#exampleModal"}
     #app.main
+      javascript:
+        if(showModal) {
+          el = document.getElementById("app")
+          el.innerHTML = el.innerHTML + modalHTML
+          console.log("into modal");
+        }
+      / modal :show="showModal", onclick => 'showModal = false'
       = yield
