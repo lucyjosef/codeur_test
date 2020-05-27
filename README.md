@@ -1,24 +1,21 @@
-# README
+# ALL EVENTS
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Install
+* pull this repo
+* run 
 
-Things you may want to cover:
+```
+bundle install
+rails db:migrate
+rails s
+```
+* Visit *localhost:3000*
 
-* Ruby version
 
-* System dependencies
+## Features:
+* allow you to create events
+* see all events in a period of 21 days around today
+* add comments to any events
+* see other comments
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Enjoy it :) 
