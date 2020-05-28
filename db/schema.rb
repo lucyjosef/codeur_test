@@ -12,10 +12,13 @@
 
 ActiveRecord::Schema.define(version: 2020_05_26_163611) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "comments", force: :cascade do |t|
     t.string "author"
-    t.text "message", limit: 140
-    t.integer "event_id"
+    t.text "message"
+    t.bigint "event_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["event_id"], name: "index_comments_on_event_id"
@@ -23,11 +26,12 @@ ActiveRecord::Schema.define(version: 2020_05_26_163611) do
 
   create_table "events", force: :cascade do |t|
     t.string "name"
-    t.text "description", limit: 300
+    t.text "description"
     t.date "event_date"
     t.string "org_email"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "comments", "events"
 end
